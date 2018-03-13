@@ -1,0 +1,124 @@
+$fontSize: 1rem;
+$fontColor: #d0d5d5;
+$red: rgba(153, 0, 0, 0.9);
+
+html,
+body {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+  background: url(http://res.cloudinary.com/liquidohr/image/upload/v1520893333/desktop-landing-1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+a {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 rgba(249, 255, 255, 0.2);
+  color: $fontColor;
+  font-size: $fontSize * 2;
+  opacity: 0.6;
+}
+
+a:hover {
+  color: $red;
+}
+
+#brand {
+  float: left;
+  display: inline-block;
+}
+
+#logo {
+  width: 100px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+#brand-name {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  color: $fontColor;
+  left: 8.5rem;
+  top: 2.5rem;
+  font-size: $fontSize * 2.5;
+}
+
+.menu {
+  position: relative;
+  left: -60px;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+#bar1,
+#bar2,
+#bar3 {
+  position: absolute;
+  height: 0;
+  width: 60px;
+  border-top: 70px solid $fontColor;
+  border-right: 40px solid $red;
+  margin-bottom: 4px;
+  opacity: 0.6;
+  transition: all 0.3s ease-in;
+}
+
+#bar2 {
+  top: 74px;
+}
+
+#bar3 {
+  top: 148px;
+}
+
+.dark {
+  position: relative;
+  height: 0;
+  width: 70px;
+  border-top: 70px solid rgba(15, 16, 15, 0.5);
+  border-right: 40px solid transparent;
+  margin-bottom: 4px;
+  transition: all 0.3s ease-in;
+}
+
+.expand {
+  width: 600px;
+}
+
+.description {
+  position: relative;
+  width: 40%;
+  top: 45%;
+  left: 2%;
+}
+
+.menus {
+  position: relative;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+.bar:hover {
+  .menus {
+    opacity: 1;
+  }
+}
+
+#dark-bar3 {
+  left: 46%;
+}
+
+#text {
+  color: $fontColor;
+  font-size: $fontSize;
+}
