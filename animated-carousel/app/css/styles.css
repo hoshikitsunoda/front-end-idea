@@ -1,0 +1,113 @@
+* {
+  transition: all 0.3s ease-in;
+  animation: all 0.3s ease-in; }
+
+html,
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Cormorant Garamond', serif; }
+
+#gallery {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  display: block;
+  max-height: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto; }
+
+#logo {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0.3rem;
+  left: 0.3rem; }
+
+#brand {
+  position: absolute;
+  left: 4.7rem;
+  top: 1.2rem;
+  font-size: 24px;
+  font-weight: bold; }
+
+.main-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  min-height: 35rem;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f7fffb;
+  box-shadow: 0 5px 15px -2px rgba(9, 13, 7, 0.2);
+  overflow: hidden; }
+
+.text-container {
+  position: absolute;
+  width: 36.5rem;
+  height: 60%;
+  top: 50%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(-135deg, #ad0103 20%, #6d0204);
+  border-radius: 1px;
+  box-shadow: 0 8px 18px -2px rgba(9, 13, 7, 0.2);
+  white-space: normal; }
+
+.img-container {
+  position: absolute;
+  max-height: 90%;
+  width: 28rem;
+  height: 90%;
+  top: 50%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 9px 20px -2px rgba(9, 13, 7, 0.25);
+  background-color: #fc5617; }
+
+.text-box {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f7fffb;
+  white-space: normal; }
+
+#left-arrow,
+#right-arrow {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fc5617;
+  border-radius: 50%;
+  box-shadow: 0 5px 24px -1px rgba(9, 13, 7, 0.5), 0 2px 14px -1px rgba(9, 13, 7, 0.3); }
+
+#left-arrow {
+  float: left;
+  top: 3rem;
+  left: 3rem; }
+
+#right-arrow {
+  float: right;
+  top: 3rem;
+  right: 3rem; }
+
+.arrow {
+  color: #f7fffb;
+  font-size: 2rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
