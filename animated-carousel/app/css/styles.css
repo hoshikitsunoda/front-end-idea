@@ -1,6 +1,7 @@
 * {
   transition: all 0.3s ease-in;
-  animation: all 0.3s ease-in; }
+  animation: all 0.3s ease-in;
+  outline: none; }
 
 html,
 body {
@@ -14,42 +15,48 @@ body {
   bottom: 5px;
   left: 5px;
   display: block;
-  max-height: 100%;
-  min-height: 100%;
+  max-height: 10rem;
+  min-height: 35rem;
   width: 100%;
   height: auto; }
 
+@media (max-width: 768px) {
+  #gallery {
+    position: relative;
+    bottom: 0;
+    left: 0; } }
+
 #logo {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 3rem;
+  height: 3rem;
   top: 0.3rem;
   left: 0.3rem; }
 
 #brand {
   position: absolute;
-  left: 4.7rem;
-  top: 1.2rem;
-  font-size: 24px;
+  left: 3.6rem;
+  top: 0.3rem;
+  font-size: 16px;
   font-weight: bold; }
 
 .main-container {
   position: relative;
   width: 90%;
-  max-width: 1200px;
+  max-width: 70rem;
   min-height: 35rem;
-  height: 80%;
+  height: 38.9rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f7fffb;
+  background-color: rgba(247, 255, 251, 0.4);
   box-shadow: 0 5px 15px -2px rgba(9, 13, 7, 0.2);
   overflow: hidden; }
 
 .text-container {
   position: absolute;
   width: 36.5rem;
-  height: 60%;
+  height: 20rem;
   top: 50%;
   left: 31%;
   transform: translate(-50%, -50%);
@@ -60,24 +67,61 @@ body {
 
 .img-container {
   position: absolute;
-  max-height: 90%;
+  max-height: 40rem;
   width: 28rem;
-  height: 90%;
+  height: 34.9rem;
   top: 50%;
   left: 74%;
   transform: translate(-50%, -50%);
   box-shadow: 0 9px 20px -2px rgba(9, 13, 7, 0.25);
   background-color: #fc5617; }
 
+@media (max-width: 768px) {
+  .img-container {
+    width: 90%;
+    height: 18rem;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden; }
+  .text-container {
+    width: 90%;
+    height: 19rem;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden; } }
+
 .text-box {
-  position: absolute;
+  position: relative;
   width: 80%;
   height: 80%;
-  top: 50%;
+  top: 10rem;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #f7fffb;
-  white-space: normal; }
+  white-space: normal;
+  overflow: auto; }
+
+@media (max-width: 768px) {
+  .text-box {
+    top: 9rem; } }
+
+.dots {
+  display: inline-block;
+  position: absolute;
+  top: 96.5%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.dot {
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ffcec9; }
 
 #left-arrow,
 #right-arrow {
@@ -97,6 +141,22 @@ body {
   float: right;
   top: 3rem;
   right: 3rem; }
+
+#slide {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #806763;
+  color: #f7fffb;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 5px 24px -1px rgba(9, 13, 7, 0.5), 0 2px 14px -1px rgba(9, 13, 7, 0.3); }
+
+.active {
+  background-color: #806763 !important; }
 
 .arrow {
   color: #f7fffb;
