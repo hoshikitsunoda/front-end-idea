@@ -7,11 +7,27 @@
     <title>Quote Wheel</title>
   </head>
   <body>
-    <div class="container">
-      <div class="message-container">
-        <div class="message-box">
+    <svg id="triangle1" width="1000" height="1000" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
 
-        </div>
+      <path id="line1" class="path" d="M 200 300 L 100 100 L 300 100 z"
+            fill="transparent" stroke="none" stroke-width="1"
+            stroke-linejoin="round" stroke-miterlimit="10" />
+    </svg>
+    <svg id="triangle2" width="1000" height="1000" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+
+      <path id="line2" class="path" d="M 200 300 L 100 100 L 300 100 z"
+            fill="transparent" stroke="none" stroke-width="1"
+            stroke-linejoin="round" stroke-miterlimit="10" />
+    </svg>
+    <svg id="triangle3" width="1000" height="1000" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+
+      <path id="line3" class="path" d="M 200 300 L 100 100 L 300 100 z"
+            fill="transparent" stroke="none" stroke-width="1"
+            stroke-linejoin="round" stroke-miterlimit="10" />
+    </svg>
+    <div class="container">
+      <div class="message-container" id="box1">
+        <div class="message-box"></div>
       </div>
     </div>
     <button id="refresh" type="button" name="button">Another Quote</button>
