@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   color: #0a1909;
+  overflow: hidden;
 }
 
 .message-container {
@@ -23,6 +24,9 @@ body {
   top: -200px;
   text-align: center;
   box-shadow: 4px 4px 0 -1px #1d4519;
+  z-index: 2;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .container {
@@ -34,11 +38,12 @@ body {
 }
 
 #refresh {
+  display: block;
   width: 5rem;
   height: 5rem;
   border-radius: 2px;
-  position: absolute;
-  top: 80%;
+  position: relative;
+  top: 40rem;
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
@@ -46,6 +51,7 @@ body {
   border: 1px solid #1d4519;
   background-color: rgba(224, 243, 197, 0.6);
   box-shadow: 4px 4px 0 -1px #1d4519;
+  z-index: 2;
 }
 
 #refresh:hover {
@@ -53,7 +59,48 @@ body {
 }
 
 #refresh:active {
-  top: calc(80% + 1px);
+  top: calc(40rem + 1px);
   left: calc(50% + 1px);
   box-shadow: 2px 2px 0 -1px #1d4519;
+}
+
+#triangle1,
+#triangle2,
+#triangle3 {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+#triangle1 {
+  top: 45%;
+}
+
+#triangle2 {
+  top: 55%;
+}
+
+#triangle3 {
+  top: 65%;
+}
+
+.path { }
+
+.path-animation {
+  display: block;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 0.6s linear 1;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
