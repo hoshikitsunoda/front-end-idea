@@ -4,6 +4,7 @@ async function getData() {
 }
 
 const $messageBox = document.querySelector('.message-box')
+const $newQuote = document.querySelector('#refresh')
 
 const decoder = (function() {
   var element = document.createElement('div')
@@ -20,8 +21,16 @@ const decoder = (function() {
   return decodeHTMLEntities
 })()
 
-getData()
+const quoteDisplay = () => {
+  getData()
   .then((data) => {
     let randomQuote = data[Math.floor(Math.random() * data.length)].content.slice(3, -5)
-    $messageBox.appendChild(document.createTextNode(decoder(randomQuote)))
+    $messageBox.innerHTML = decoder(randomQuote)
   })
+}
+
+quoteDisplay()
+
+$newQuote.addEventListener('click', () => {
+  quoteDisplay()
+})
