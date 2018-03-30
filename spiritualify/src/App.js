@@ -35,15 +35,18 @@ class App extends Component {
     return hashParams;
   }
 
-  getNowPlaying(){
+  getNowPlaying = () => {
     spotifyApi.getMyCurrentPlaybackState()
       .then((response) => {
+        console.log(response.item.album.artists[0].name)
+        console.log(response.item.album.images[0].url)
         this.setState({
           nowPlaying: { 
-              name: response.item.name, 
+              name: response.item.album.artists[0].name, 
               albumArt: response.item.album.images[0].url
             }
         });
+        console.log(this.state)
       })
   }
 
@@ -54,7 +57,7 @@ class App extends Component {
         <Info
           playing={this.state.nowPlaying}
           loggedIn={this.state.loggedIn}
-          onClick={this.getNowPlaying} />
+          getInfo={this.getNowPlaying} />
         <Player />
       </div>
     );
