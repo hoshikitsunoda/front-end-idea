@@ -13,7 +13,6 @@ class App extends Component {
     super();
     const params = this.getHashParams();
     const token = params.access_token;
-    console.log(params);
     if (token) {
       spotifyApi.setAccessToken(token);
     }
@@ -38,15 +37,12 @@ class App extends Component {
   getNowPlaying = () => {
     spotifyApi.getMyCurrentPlaybackState()
       .then((response) => {
-        console.log(response.item.album.artists[0].name)
-        console.log(response.item.album.images[0].url)
         this.setState({
           nowPlaying: { 
               name: response.item.album.artists[0].name, 
               albumArt: response.item.album.images[0].url
             }
         });
-        console.log(this.state)
       })
   }
 
@@ -58,7 +54,6 @@ class App extends Component {
           playing={this.state.nowPlaying}
           loggedIn={this.state.loggedIn}
           getInfo={this.getNowPlaying} />
-        <Player />
       </div>
     );
   }
