@@ -18,7 +18,8 @@ class App extends Component {
     }
     this.state = {
       loggedIn: token ? true : false,
-      nowPlaying: { name: 'Not Checked', albumArt: '' }
+      nowPlaying: { name: 'Not Checked', albumArt: '' },
+      active: false
     }
   }
 
@@ -35,15 +36,18 @@ class App extends Component {
   }
 
   getNowPlaying = () => {
+    const currentState = this.state.active
     spotifyApi.getMyCurrentPlaybackState()
       .then((response) => {
         this.setState({
           nowPlaying: { 
               name: response.item.album.artists[0].name, 
-              albumArt: response.item.album.images[0].url
+              albumArt: response.item.album.images[0].url,
+              active: !currentState
             }
         });
       })
+    
   }
 
   render() {
