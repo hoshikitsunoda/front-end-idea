@@ -108,6 +108,8 @@ button:active {
   font-size: 20px;
   font-weight: 200;
   letter-spacing: 2px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .weather__key {

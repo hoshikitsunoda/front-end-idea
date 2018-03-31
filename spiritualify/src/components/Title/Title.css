@@ -1,0 +1,17 @@
+:local(.Title) {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    width: 80%;
+    margin: 5rem auto;
+    text-align: center;
+    color: #272827;
+    text-transform: uppercase;
+    border-bottom: 1px solid #272827;
+    line-height: 0.1rem;
+}
+
+:local(.Title) span { 
+    background:#fff; 
+    padding: 2rem;
+    margin: 0 auto;
+}
