@@ -1,0 +1,23 @@
+:local(.Row) {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+:local(.TextArea) {
+    resize: vertical;
+    width: 40%;
+    float: left;
+}
+
+:local(.TextField) {
+    font-size: 0.8rem;
+    padding: 2rem;
+    height: 600px;
+    width: 100%;
+}
+
+:local(.Output) {
+    width: 40%;
+    height: 600px;
+    float: right;
+}
