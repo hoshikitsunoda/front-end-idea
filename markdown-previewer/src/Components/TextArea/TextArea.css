@@ -1,6 +1,6 @@
 :local(.Row) {
   width: 80%;
-  margin: 1rem auto; }
+  margin: 3rem auto; }
 
 :local(.TextArea) {
   resize: vertical;
@@ -11,9 +11,14 @@
   font-size: 0.8rem;
   padding: 2rem;
   height: 600px;
-  width: 100%; }
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px inset rgba(88, 88, 88, 0.3); }
 
 :local(.Output) {
   width: 40%;
   height: 600px;
-  float: right; }
+  padding: 2rem;
+  float: right;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px inset rgba(88, 88, 88, 0.3); }
